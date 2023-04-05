@@ -24,6 +24,14 @@ public class Player {
         };
     }
 
-
+    private StringBuilder getScoreAdvantageStringBuilder(Player player2) {
+        StringBuilder score;
+        int minusResult = this.score()-player2.score();
+        if (minusResult==1) score = new StringBuilder("Advantage player1");
+        else if (minusResult ==-1) score = new StringBuilder("Advantage player2");
+        else if (minusResult>=2) score = new StringBuilder("Win for player1");
+        else score = new StringBuilder("Win for player2");
+        return score;
+    }
 
 }
