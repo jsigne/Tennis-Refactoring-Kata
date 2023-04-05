@@ -24,11 +24,7 @@ public class TennisGame1 implements TennisGame {
         }
         if (player1.score()>=4 || player2.score()>=4)
         {
-            int minusResult = player1.score()-player2.score();
-            if (minusResult==1) score = new StringBuilder("Advantage player1");
-            else if (minusResult ==-1) score = new StringBuilder("Advantage player2");
-            else if (minusResult>=2) score = new StringBuilder("Win for player1");
-            else score = new StringBuilder("Win for player2");
+            return getScoreAdvantageStringBuilder().toString();
         }
         else
         {
@@ -45,5 +41,15 @@ public class TennisGame1 implements TennisGame {
             }
         }
         return score.toString();
+    }
+
+    private StringBuilder getScoreAdvantageStringBuilder() {
+        StringBuilder score;
+        int minusResult = player1.score()-player2.score();
+        if (minusResult==1) score = new StringBuilder("Advantage player1");
+        else if (minusResult ==-1) score = new StringBuilder("Advantage player2");
+        else if (minusResult>=2) score = new StringBuilder("Win for player1");
+        else score = new StringBuilder("Win for player2");
+        return score;
     }
 }
