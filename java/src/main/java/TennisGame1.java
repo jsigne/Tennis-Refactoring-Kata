@@ -4,8 +4,8 @@ public class TennisGame1 implements TennisGame {
     private final TennisPlayer tennisPlayer2;
 
     public TennisGame1(String player1Name, String player2Name) {
-        tennisPlayer1 = new TennisPlayer(player1Name);
-        tennisPlayer2 = new TennisPlayer(player2Name);
+        tennisPlayer1 = new TennisPlayer();
+        tennisPlayer2 = new TennisPlayer();
     }
 
     public void wonPoint(String playerName) {

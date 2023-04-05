@@ -1,9 +1,7 @@
 public class TennisPlayer {
-    private final String name;
     private int score;
 
-    public TennisPlayer(String name) {
-        this.name = name;
+    public TennisPlayer() {
         this.score = 0;
     }
 
